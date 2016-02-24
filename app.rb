@@ -8,7 +8,7 @@ Cuba.plugin Cuba::Render
 Cuba.define do
   on get do
     on root do
-
+      res.write partial "index"
     end
 
     on 'redis' do
