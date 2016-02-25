@@ -6,19 +6,29 @@
   </ul>
 </nav>
 
-<div class="content pure-u-1-2 pure-u-md-1-2">
+<div class="content pure-u-3-5 pure-u-md-1-2">
   <div class="posts">
     <% posts.each do |post| %>
       <section class="post">
         <header class="post-header">
-          <%= post.author %>
+          <nav class="nav">
+            <ul class="nav-post-list">
+              <li class="nav-post-item">
+                Author: <%= post.author %>
+              </li>
+              <li class="nav-post-item">
+                Likes: <%= post.likes %>
+              </li>
+              <li class="nav-post-item">
+                Views: <%= post.views %>
+              </li>
+              <li class="nav-post-item">
+                Shares: <%= post.shares %>
+              </li>
+            </ul>
+          </nav>
           <h1><%= post.title %></h1>
-          <h3>
-            Likes: <%= post.likes %>
-            Views: <%= post.views %>
-            Shares: <%= post.shares %>
-          </h3>
-          <%= post.abstract %>
+          <h3><%= post.abstract %></h3>
         </header>
         <div class="post-description">
           <p><%= post.content %></p>
