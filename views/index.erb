@@ -9,4 +9,16 @@
   </ul>
 </nav>
 
+<form class="search-form" action="/search">
+  Search by author:
+  <input type="text" name="q" value="<%= req.params["q"] %>">
+  <input type="submit" name="db" value="in Redis">
+  <input type="submit" name="db" value="in Postgres">
+  <input type="submit" name="db" value="in Elasticsearch">
+  <% if elapsed_time %>
+    Total match: <%= total %>
+    Elapsed time: <%= elapsed_time %>
+  <% end %>
+</form>
+
 <%= partial 'list_posts', posts: posts %>
