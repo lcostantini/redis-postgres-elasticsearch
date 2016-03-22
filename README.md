@@ -1,3 +1,5 @@
+![](https://github.com/lcostantini/redis-postgres-elasticsearch/blob/master/gif-lcostantini-redis-postgres-elasticsearch.gif)
+
 # Description
 This application was designed to test the response time for searches between
 **Redis** and **Postgres** against **Elasticsearch**.
